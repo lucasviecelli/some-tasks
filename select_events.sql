@@ -9,9 +9,13 @@ WITH diffs as (
 )
 SELECT
     event_type,
-    case when count_event > 2 then 
+    CASE 
+        WHEN count_event > 2 THEN
     	  MAX(difference) FILTER (WHERE id = 2) 
-    else 0 end as value
-from diffs
-where COUNT_EVENT > 1
+        ELSE
+            0 
+    END AS value
+FROM diffs
+WHERE 
+    count_event > 1
 GROUP BY event_type, count_event;
