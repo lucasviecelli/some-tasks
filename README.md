@@ -12,6 +12,10 @@ ruby solution.rb
 * Postgres version
 10.4
 
-** Primeiro executar o script insert_events.sql
-** Executar o SELECT
+```
+ Primeiro executar o script insert_events.sql
+```
+```
+Executar o SELECT no script select_events.sql
+```
 
